@@ -1,0 +1,430 @@
+#include "bubbleprocessdialog.h"
+#include "ui_bubbleprocessdialog.h"
+#include "bubbleprocess.h"
+#include "bubbletransformer.h"
+#include "databasemanager.h"
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <GL/glut.h>
+#include <QDir>
+
+vector<bubblePoint> aBubble;
+
+int counter = 0;
+
+BubbleProcessDialog::BubbleProcessDialog(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::BubbleProcessDialog)
+{
+    ui->setupUi(this);
+    this->setAttribute(Qt::WA_DeleteOnClose);
+
+    this->initializeView();
+
+}
+
+BubbleProcessDialog::~BubbleProcessDialog()
+{
+    delete ui;
+}
+
+void BubbleProcessDialog::on_But_bubbleFilesSetRootDir_3_clicked()
+{
+    // Get the root directory
+    QString path =   QFileDialog::getExistingDirectory(this, tr("Open Directory"),
+                                                       "home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+
+    if(path != NULL){
+
+        // append a slash
+        path.append("/");
+
+        // create a directory object with path
+        QDir myDir(path);
+
+        // Set the root directory for bubbleProcess
+        bubbleProcess::setBubblesRootDirectory(path);
+
+        ui->Edit_bubbleFilesRootDir_3->setText(path);
+
+        // Create a filter for the given extensions
+        QStringList filters(ui->Edit_bubbleFilesExtension_3->text());
+
+        qDebug()<<filters;
+
+        // First check if we have a directory in the root file
+        QStringList tempList = myDir.entryList(QDir::Dirs | QDir::NoDotDot |QDir::NoDot,QDir::Name);
+
+        QStringList list =tempList;
+        // If we have directory or directories (This part is specific to cx\apes0\bubble0.m format!!!)
+        if(tempList.size() > 0){
+
+            bool startsfromZero = false;
+
+            for(int i = 0; i < tempList.size(); i++)
+            {
+                QString charr = "c";
+
+                QString tmp = tempList.at(i);
+
+                tmp.remove(0,1);
+
+                int num = tmp.toInt();
+
+                if(i==0 && i==num)startsfromZero = true;
+
+                charr.append(tmp);
+
+                if(!startsfromZero) list[num-1] = charr;
+
+                else list[num] = charr;
+
+            }
+            // set the file list of the bubbles
+            bubbleProcess::setBubblesFolderList(list);
+        }
+        else{
+
+            // Create a filter for the given extensions
+            QStringList filters(ui->Edit_bubbleFilesExtension_3->text());
+
+            qDebug()<<filters;
+
+            // List the bubbles in that directory
+            QStringList list = myDir.entryList(filters);
+
+            if(list.size()>0) bubbleProcess::setBubblesFileList(list);
+
+        }
+
+        qDebug()<<list;
+
+    }
+
+}
+
+void BubbleProcessDialog::initializeView(){
+
+    ui->Edit_bubbleFilesExtension_3->setText("bubble0.m");
+
+    connect(ui->Widget_BPbubbleViewer, SIGNAL(frameChanged(const int &)),this, SLOT(handleGLBubbleViewerFrameChanged(const int &)));
+
+}
+
+void BubbleProcessDialog::on_But_fetchBubbleFiles_3_clicked()
+{
+    QString rootPath = bubbleProcess::getBubblesRootDirectory();
+
+    // if rootPath is not set, there is nothing i can do!!
+    if(rootPath == NULL)return;
+
+    vector <vector <bubblePoint> > bubbles = bubbleProcess::getBubbles();
+
+    // Clear previous bubbles, new ones are coming
+    if(bubbles.size() > 0)bubbles.erase(bubbles.begin(),bubbles.end());
+
+    // Get the folder List
+    QStringList folderList = bubbleProcess::getBubblesFolderList();
+
+    // create a new vector that will hold the read bubbles
+    vector < vector < bubblePoint > > readBubbles;
+
+    // This part is c0, c1, c2, ....
+    if(folderList.size()>0){
+
+        for(int i = 0; i < folderList.size(); i++){
+
+            QString folderName = folderList.at(i);
+
+            QString path = rootPath;
+
+            // Create the path: "path/folder/"
+            path.append(folderName).append("/");
+
+            //qDebug()<<path;
+
+            // create a directory object with path
+            QDir myDir(path);
+
+            // First check if we have a directory in the root file
+            QStringList list = myDir.entryList(QDir::Dirs | QDir::NoDotDot |QDir::NoDot,QDir::NoSort);
+
+            // This part is apes0
+            if(list.size() > 0){
+
+                for(int k = 0; k < list.size(); k++){
+
+                    // Create a filter for the given extensions
+                    QStringList filters(ui->Edit_bubbleFilesExtension_3->text());
+
+                    // the path becomes "root/cx/apes0/"
+                    path.append(list.at(k)).append("/");
+
+                    QDir dir(path);
+
+                    // List the bubbles in that directory
+                    QStringList list2 = dir.entryList(filters);
+
+                    if(list2.size()>0){
+
+                        for(int j = 0; j< list2.size(); j++){
+
+                            QString totPath = path.append(list2.at(j));
+
+                            qDebug()<<"Total Path is: "<<totPath;
+
+                            QFile file(totPath);
+
+                            file.open(QFile::ReadOnly);
+
+                            vector<bubblePoint> aBubb =  bubbleProcess::readBubble(&file);
+
+                            readBubbles.push_back(aBubb);
+
+                            qDebug()<<"I have read a bubble";
+
+                        }
+
+                    }
+                }
+
+            }
+
+        }
+
+    }
+    else{
+
+        QString path = rootPath;
+
+        // Create the path: "path/folder/"
+        path.append("/");
+
+        QStringList fileList = bubbleProcess::getBubblesFileList();
+
+        if(fileList.size()>0){
+
+            for(int i = 0; i < fileList.size(); i++){
+
+                QString totPath = path.append(fileList.at(i));
+
+                qDebug()<<"Total Path is: "<<totPath;
+
+                QFile file(totPath);
+
+                if(file.open(QFile::ReadOnly)){
+
+                    vector<bubblePoint> aBubb =  bubbleProcess::readBubble(&file);
+
+                    readBubbles.push_back(aBubb);
+                }
+            }
+
+        }
+
+    }
+
+    bubbleProcess::setBubbles(readBubbles);
+
+    bubbles = bubbleProcess::getBubbles();
+
+    /// Fill the listview with loaded bubbles
+    for(unsigned int i = 0; i < bubbles.size(); i ++)
+    {
+        ui->ComboBox_fetchedBubbles_3->addItem(QString::number(i));
+
+    }
+
+}
+
+void BubbleProcessDialog::on_But_chooseFile_3_clicked()
+{
+
+    if(DatabaseManager::isOpen())
+    {
+        int bubbleType = ui->Edit_bubbleType_3->text().toInt();
+
+        int bubbleNumber = ui->Edit_bubbleNumber_3->text().toInt();
+
+        std::vector<bubblePoint> bubble = DatabaseManager::readBubble(bubbleType, bubbleNumber);
+
+        if(bubble.size() > 0)
+        {
+            ui->Widget_BPbubbleViewer->Points = bubble;
+
+            ui->Widget_BPbubbleViewer->setDrawType(DRAW_TYPE_DEFAULT);
+
+        }
+        else
+        {
+            qDebug()<<"Error!! Bubble can't be read from database";
+        }
+    }
+    else
+    {
+        qDebug()<<"Error!! Database is not open!!";
+    }
+
+}
+void BubbleProcessDialog::handleGLBubbleViewerFrameChanged(int frameNumber){
+
+    ui->Widget_BPbubbleViewer->Points.push_back(aBubble[counter]);
+
+    counter++;
+
+    if(counter > aBubble.size()){
+
+        qDebug()<<"I have finished drawing";
+        ui->Widget_BPbubbleViewer->setDrawType(DRAW_TYPE_NONE);
+
+    }
+
+}
+
+void BubbleProcessDialog::on_ComboBox_fetchedBubbles_3_currentIndexChanged(int index)
+{
+    vector <vector < bubblePoint > > bubbles = bubbleProcess::getBubbles();
+
+    if(bubbles.at(index).size() > 0){
+
+        ui->Widget_BPbubbleViewer->Points = bubbles.at(index);
+
+        ui->Widget_BPbubbleViewer->setDrawType(DRAW_TYPE_DEFAULT);
+    }
+
+}
+
+void BubbleProcessDialog::on_But_readPoseData_3_clicked()
+{
+
+    // Get the root directory
+    QString path =   QFileDialog::getOpenFileName(this,"Open Pose File",".",NULL);
+
+    if(path != NULL)
+    {
+
+        QFile file(path);
+
+        file.open(QFile::ReadOnly);
+
+        vector<positionData> poses =  bubbleProcess::readPositionData(&file);
+
+        qDebug()<<"I have read position data";
+
+        bubbleProcess::setPositionData(poses);
+
+    }
+
+}
+
+void BubbleProcessDialog::on_But_transformBubbles_3_clicked()
+{
+    QFile file("diffs.txt");
+
+    vector<positionData> poses = bubbleProcess::getPositionData();
+
+    if(poses.size() == 0) return;
+
+    vector< vector < bubblePoint > > bubbles = bubbleProcess::getBubbles();
+
+    if(bubbles.size() == 0) return;
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+        return;
+
+    vector < vector <bubblePoint> > transformedBubbles;
+
+    QTextStream out(&file);
+
+
+    for(unsigned int i = 0; i < bubbles.size()-1; i++){
+
+        vector<bubblePointXYZ> bubbleXYZ =  bubbleProcess::convertBubSph2BubXYZ(bubbles[i],15);
+
+        positionData diff;
+
+        diff.x = poses[i+1].x - poses[i].x;
+
+        diff.y = poses[i+1].y - poses[i].y;
+
+        diff.headingD = poses[i].headingD-poses[i+1].headingD;
+
+        vector<bubblePoint> transformedBubble =  BubbleTransformer::transformXYZBubble(bubbleXYZ,diff,poses[i+1]);
+
+        transformedBubbles.push_back(transformedBubble);
+
+        vector< double > dif = bubbleProcess::calculateEuclideanDiff(bubbles[i+1],transformedBubble);
+
+        qDebug()<<"diff is"<<dif[0]<<" "<<i+1<<" "<<i+2;
+
+        // 1. sum over overlap 2. overlap 3. sum / count
+        out<<dif[0]<<" "<<" "<<dif[1]<<" "<<dif[2]<<" "<< i+1 <<" "<<i+2<< "\n";
+    }
+
+    file.close();
+
+}
+
+void BubbleProcessDialog::on_But_calcDiff_clicked()
+{
+    if(ui->Edit_transformSource_3->text() == NULL || ui->Edit_transformTarget_3->text() ==NULL) return;
+
+    if(DatabaseManager::isOpen())
+    {
+        int bubbleType = ui->Edit_bubbleType_3->text().toInt();
+
+        int sourceBubbleNumber = ui->Edit_transformSource_3->text().toInt();
+
+        int targetBubbleNumber = ui->Edit_transformTarget_3->text().toInt();
+
+        std::vector<bubblePoint> sourcebubble = DatabaseManager::readBubble(bubbleType, sourceBubbleNumber);
+
+        QFile file("bubbleDiffs.txt");
+        file.open(QFile::WriteOnly);
+        QTextStream str(&file);
+        for(int i = 0; i < 1340; i++ ){
+
+            std::vector<bubblePoint> targetbubble = DatabaseManager::readBubble(bubbleType, i);
+
+
+            if(sourcebubble.size() > 0 && targetbubble.size() > 0)
+            {
+
+                vector <double> res = bubbleProcess::calculateEuclideanDiff(sourcebubble,targetbubble);
+
+                qDebug()<<"diff is"<<res[0]<<" "<<sourceBubbleNumber<<" "<<targetBubbleNumber;
+
+                str<<res[0]<<"\n";
+
+            }
+            else
+            {
+                qDebug()<<"Error!! One of the bubbles cannot be read from the database";
+            }
+        }
+        file.close();
+    }
+    else
+    {
+        qDebug()<<"Error!! Database is not open!!";
+    }
+
+}
+
+
+
+void BubbleProcessDialog::on_but_SaveGLWidget_clicked()
+{
+
+    QString path = QDir::homePath();
+
+    path.append("/bubble.jpg");
+
+    QPixmap image = QPixmap::grabWidget( ui->Widget_BPbubbleViewer );
+
+    if( !image.save( path, "JPG",99 ) )
+       {
+          QMessageBox::warning( this, "Save Image", "Error saving image." );
+       }
+
+}

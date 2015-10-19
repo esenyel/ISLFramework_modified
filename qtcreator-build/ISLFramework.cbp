@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="ISLFramework" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\opt\ros\fuerte\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\ros\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\ros\core\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\ros\core\rosbuild\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\roslang\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\roslang\cmake\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\roslisp\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\roslisp\rosbuild\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\rospy\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\rospy\rosbuild\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\roscpp\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\roscpp\rosbuild\;CMake Files\..\..\..\..\..\opt\ros\fuerte\share\OpenCV\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\;CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\CMake\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="ISLFramework">
+         <Option output="/home/esen/fuerte_workspace/sandbox/ISLFramework/lib/libISLFramework.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_OPENGL_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DBOOST_CB_DISABLE_DEBUG" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./Qt-Build" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/bubble" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/database" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/dialog" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/imageprocess" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/irobot" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/kinect" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/pcl" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/threads" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/include" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+            <Add directory="/opt/ros/fuerte/include" />
+            <Add directory="/opt/ros/fuerte/include/opencv" />
+            <Add directory="/opt/ros/fuerte/include/pcl-1.5" />
+            <Add directory="/opt/ros/fuerte/stacks" />
+            <Add directory="/opt/ros/fuerte/stacks/bond_core/bond/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/bond_core/bondcpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/bond_core/smclib/include" />
+            <Add directory="/opt/ros/fuerte/stacks/bullet/include" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/include" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/msg/cpp" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/srv/cpp" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/angles/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/tf/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/tf/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/tf/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/nodelet_core/nodelet/include" />
+            <Add directory="/opt/ros/fuerte/stacks/nodelet_core/nodelet/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/nodelet_core/nodelet_topic_tools/include" />
+            <Add directory="/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/include" />
+            <Add directory="/opt/ros/fuerte/stacks/perception_pcl/pcl_ros/cfg/cpp" />
+            <Add directory="/opt/ros/fuerte/stacks/perception_pcl/pcl_ros/include" />
+            <Add directory="/opt/ros/fuerte/stacks/pluginlib" />
+            <Add directory="/opt/ros/fuerte/stacks/pluginlib/include" />
+            <Add directory="/opt/ros/fuerte/stacks/turtlebot/turtlebot_node/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/turtlebot/turtlebot_node/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/vision_opencv/cv_bridge/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtOpenGL" />
+            <Add directory="/usr/include/vtk-5.8" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/vtk-5.8" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 ISLFramework" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="ISLFramework/fast">
+         <Option output="/home/esen/fuerte_workspace/sandbox/ISLFramework/lib/libISLFramework.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_OPENGL_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DBOOST_CB_DISABLE_DEBUG" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./Qt-Build" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/bubble" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/database" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/dialog" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/imageprocess" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/irobot" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/kinect" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/pcl" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/threads" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/include" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+            <Add directory="/opt/ros/fuerte/include" />
+            <Add directory="/opt/ros/fuerte/include/opencv" />
+            <Add directory="/opt/ros/fuerte/include/pcl-1.5" />
+            <Add directory="/opt/ros/fuerte/stacks" />
+            <Add directory="/opt/ros/fuerte/stacks/bond_core/bond/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/bond_core/bondcpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/bond_core/smclib/include" />
+            <Add directory="/opt/ros/fuerte/stacks/bullet/include" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/include" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/msg/cpp" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/srv/cpp" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/angles/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/tf/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/tf/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/tf/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/nodelet_core/nodelet/include" />
+            <Add directory="/opt/ros/fuerte/stacks/nodelet_core/nodelet/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/nodelet_core/nodelet_topic_tools/include" />
+            <Add directory="/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/include" />
+            <Add directory="/opt/ros/fuerte/stacks/perception_pcl/pcl_ros/cfg/cpp" />
+            <Add directory="/opt/ros/fuerte/stacks/perception_pcl/pcl_ros/include" />
+            <Add directory="/opt/ros/fuerte/stacks/pluginlib" />
+            <Add directory="/opt/ros/fuerte/stacks/pluginlib/include" />
+            <Add directory="/opt/ros/fuerte/stacks/turtlebot/turtlebot_node/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/turtlebot/turtlebot_node/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/vision_opencv/cv_bridge/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtOpenGL" />
+            <Add directory="/usr/include/vtk-5.8" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/vtk-5.8" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 ISLFramework/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="ROSBUILD_genmsg_cpp">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 ROSBUILD_genmsg_cpp" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="ROSBUILD_genmsg_lisp">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 ROSBUILD_genmsg_lisp" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="ROSBUILD_gensrv_cpp">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 ROSBUILD_gensrv_cpp" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="ROSBUILD_gensrv_lisp">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 ROSBUILD_gensrv_lisp" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="clean-test-results">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean-test-results" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="example">
+         <Option output="/home/esen/fuerte_workspace/sandbox/ISLFramework/bin/example" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/bin" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_OPENGL_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DBOOST_CB_DISABLE_DEBUG" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./Qt-Build" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/bubble" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/database" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/dialog" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/imageprocess" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/irobot" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/kinect" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/pcl" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/threads" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/include" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+            <Add directory="/opt/ros/fuerte/include" />
+            <Add directory="/opt/ros/fuerte/include/opencv" />
+            <Add directory="/opt/ros/fuerte/include/pcl-1.5" />
+            <Add directory="/opt/ros/fuerte/stacks" />
+            <Add directory="/opt/ros/fuerte/stacks/bond_core/bond/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/bond_core/bondcpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/bond_core/smclib/include" />
+            <Add directory="/opt/ros/fuerte/stacks/bullet/include" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/include" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/msg/cpp" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/srv/cpp" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/angles/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/tf/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/tf/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/tf/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/nodelet_core/nodelet/include" />
+            <Add directory="/opt/ros/fuerte/stacks/nodelet_core/nodelet/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/nodelet_core/nodelet_topic_tools/include" />
+            <Add directory="/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/include" />
+            <Add directory="/opt/ros/fuerte/stacks/perception_pcl/pcl_ros/cfg/cpp" />
+            <Add directory="/opt/ros/fuerte/stacks/perception_pcl/pcl_ros/include" />
+            <Add directory="/opt/ros/fuerte/stacks/pluginlib" />
+            <Add directory="/opt/ros/fuerte/stacks/pluginlib/include" />
+            <Add directory="/opt/ros/fuerte/stacks/turtlebot/turtlebot_node/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/turtlebot/turtlebot_node/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/vision_opencv/cv_bridge/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtOpenGL" />
+            <Add directory="/usr/include/vtk-5.8" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/vtk-5.8" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 example" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="example/fast">
+         <Option output="/home/esen/fuerte_workspace/sandbox/ISLFramework/bin/example" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/bin" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_OPENGL_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DBOOST_CB_DISABLE_DEBUG" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./Qt-Build" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/bubble" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/database" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/dialog" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/imageprocess" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/irobot" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/kinect" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/pcl" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/./src/threads" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/include" />
+            <Add directory="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+            <Add directory="/opt/ros/fuerte/include" />
+            <Add directory="/opt/ros/fuerte/include/opencv" />
+            <Add directory="/opt/ros/fuerte/include/pcl-1.5" />
+            <Add directory="/opt/ros/fuerte/stacks" />
+            <Add directory="/opt/ros/fuerte/stacks/bond_core/bond/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/bond_core/bondcpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/bond_core/smclib/include" />
+            <Add directory="/opt/ros/fuerte/stacks/bullet/include" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/include" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/msg/cpp" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/srv/cpp" />
+            <Add directory="/opt/ros/fuerte/stacks/dynamic_reconfigure/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/angles/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/tf/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/tf/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/geometry/tf/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/nodelet_core/nodelet/include" />
+            <Add directory="/opt/ros/fuerte/stacks/nodelet_core/nodelet/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/nodelet_core/nodelet_topic_tools/include" />
+            <Add directory="/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/include" />
+            <Add directory="/opt/ros/fuerte/stacks/perception_pcl/pcl_ros/cfg/cpp" />
+            <Add directory="/opt/ros/fuerte/stacks/perception_pcl/pcl_ros/include" />
+            <Add directory="/opt/ros/fuerte/stacks/pluginlib" />
+            <Add directory="/opt/ros/fuerte/stacks/pluginlib/include" />
+            <Add directory="/opt/ros/fuerte/stacks/turtlebot/turtlebot_node/msg_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/turtlebot/turtlebot_node/srv_gen/cpp/include" />
+            <Add directory="/opt/ros/fuerte/stacks/vision_opencv/cv_bridge/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.6" />
+            <Add directory="/usr/include/c++/4.6/backward" />
+            <Add directory="/usr/include/c++/4.6/x86_64-linux-gnu/." />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtOpenGL" />
+            <Add directory="/usr/include/vtk-5.8" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/vtk-5.8" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 example/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rosbuild_precompile">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 rosbuild_precompile" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rosbuild_premsgsrvgen">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 rosbuild_premsgsrvgen" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rospack_genmsg">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 rospack_genmsg" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rospack_genmsg_libexe">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 rospack_genmsg_libexe" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rospack_gensrv">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 rospack_gensrv" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="test">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 test" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="test-future">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 test-future" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="test-results">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 test-results" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="test-results-run">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 test-results-run" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="tests">
+         <Option working_dir="/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 tests" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/esen/fuerte_workspace/sandbox/ISLFramework/qtcreator-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/bubble/bubbleprocess.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/bubble/bubbletransformer.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/bubble/dfc.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/bubble/invariants.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/database/databasemanager.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/MainWindow.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/bubbleprocessdialog.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/glbubbleviewer.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/imageprocessdialog.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/irobotdialog.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/pcldialog.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/example.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/imageprocess/imageprocess.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/irobot/irobot.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/kinect/kinectgrabber.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/kinect/kinecttransformer.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/kinect/kinectutility.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/pcl/pcprocessing.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/threads/rosThread.cpp">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/bubble/bubbleprocess.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/bubble/bubbletransformer.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/database/databasemanager.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/MainWindow.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/MainWindow.ui">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/bubbleprocessdialog.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/bubbleprocessdialog.ui">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/glbubbleviewer.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/imageprocessdialog.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/imageprocessdialog.ui">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/irobotdialog.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/irobotdialog.ui">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/pcldialog.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/dialog/pcldialog.ui">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/imageprocess/imageprocess.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/irobot/irobot.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/kinect/kinectgrabber.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/kinect/kinecttransformer.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/kinect/kinectutility.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/pcl/pcprocessing.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/src/threads/rosThread.h">
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../opt/ros/fuerte/share/ros/core/rosbuild/rosbuild.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\fuerte\share\ros\core\rosbuild\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../opt/ros/fuerte/share/ros/core/rosbuild/private.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\fuerte\share\ros\core\rosbuild\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../opt/ros/fuerte/share/ros/core/rosbuild/public.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\fuerte\share\ros\core\rosbuild\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../opt/ros/fuerte/share/ros/core/rosbuild/ProcessorCount.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\fuerte\share\ros\core\rosbuild\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../opt/ros/fuerte/share/ros/core/rosbuild/rosconfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\fuerte\share\ros\core\rosbuild\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../opt/ros/fuerte/share/roslang/cmake/roslang.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\fuerte\share\roslang\cmake\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../opt/ros/fuerte/share/roslisp/rosbuild/roslisp.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\fuerte\share\roslisp\rosbuild\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../opt/ros/fuerte/share/rospy/rosbuild/rospy.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\fuerte\share\rospy\rosbuild\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../opt/ros/fuerte/share/roscpp/rosbuild/roscpp.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\fuerte\share\roscpp\rosbuild\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../opt/ros/fuerte/share/OpenCV/OpenCVConfig-version.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\fuerte\share\OpenCV\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../opt/ros/fuerte/share/OpenCV/OpenCVConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\fuerte\share\OpenCV\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../usr/lib/vtk-5.8/VTKConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../usr/lib/vtk-5.8/VTKConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../usr/lib/vtk-5.8/VTKConfigQt.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../usr/lib/vtk-5.8/VTKTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../usr/lib/vtk-5.8/VTKTargets-debug.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../usr/lib/vtk-5.8/UseVTK.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\" />
+      </Unit>
+      <Unit filename="/home/esen/fuerte_workspace/sandbox/ISLFramework/../../../../../usr/lib/vtk-5.8/CMake/vtkMakeInstantiator.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\vtk-5.8\CMake\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>
